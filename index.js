@@ -26,7 +26,7 @@ mongoose.connect(process.env.MONGO_URL, {
 .catch((err) =>console.log(err))
 
 app.use('/auth', authRoute);
-app.use('/update', userRoute);
+app.use('/user', userRoute);
 
 //STARTING PORT
 app.listen(PORT, ()=>{
