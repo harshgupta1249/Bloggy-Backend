@@ -4,6 +4,7 @@ const cors = require("cors");
 const mongoose = require("mongoose");
 
 const authRoute = require('./routes/auth');
+const userRoute = require('./routes/users');
 
 const app = express();
 
@@ -25,6 +26,7 @@ mongoose.connect(process.env.MONGO_URL, {
 .catch((err) =>console.log(err))
 
 app.use('/auth', authRoute);
+app.use('/update', userRoute);
 
 //STARTING PORT
 app.listen(PORT, ()=>{
