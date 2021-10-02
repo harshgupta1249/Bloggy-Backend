@@ -36,7 +36,7 @@ router.delete("/delete/:id", async (req, res) => {
         try {
           await Post.deleteMany({ username: user.username });
           await User.findByIdAndDelete(req.params.id);
-          res.status(200).json("User has been deleted...");
+          res.status(200).json("User has been deleted");
         } catch (err) {
           res.status(500).json(err);
         }
@@ -48,6 +48,18 @@ router.delete("/delete/:id", async (req, res) => {
     }
   } else {
     res.status(401).json("Not authorized to delete");
+  }
+});
+
+//GET
+router.get("/:id", async (req, res)=>{
+  try{
+    const user = await User.findById(req.params.id);
+    const {password, ...others} = user._doc;
+    res.status(200).json(others);
+  }
+  catch(err){
+    res.status(500).json(err);
   }
 });
 
