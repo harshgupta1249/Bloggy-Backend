@@ -6,6 +6,7 @@ const mongoose = require("mongoose");
 const authRoute = require('./routes/auth');
 const userRoute = require('./routes/users');
 const postRoute = require('./routes/posts');
+const categoryRoute = require('./routes/categories');
 
 const app = express();
 
@@ -29,6 +30,7 @@ mongoose.connect(process.env.MONGO_URL, {
 app.use('/auth', authRoute);
 app.use('/user', userRoute);
 app.use('/post', postRoute);
+app.use('/category', categoryRoute);
 
 //STARTING PORT
 app.listen(PORT, ()=>{
