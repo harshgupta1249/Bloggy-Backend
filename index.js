@@ -3,6 +3,7 @@ require("dotenv").config();
 const cors = require("cors");
 const mongoose = require("mongoose");
 const multer = require("multer");
+const path = require("path");
 
 const authRoute = require('./routes/auth');
 const userRoute = require('./routes/users');
@@ -13,6 +14,7 @@ const app = express();
 
 app.use(express.json());
 app.use(cors());
+app.use("/images", express.static(path.join(__dirname, "/images")));
 
 const PORT = process.env.PORT || 8000;
 
