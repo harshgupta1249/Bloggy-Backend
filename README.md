@@ -2,7 +2,7 @@
 <div align="center">
 
 # Bloggy
-   <b>Backend Repository : </b> https://github.com/harshgupta1249/Bloggy-Frontend<br><br>
+   <b>Frontend Repository : </b> https://github.com/harshgupta1249/Bloggy-Frontend<br><br>
    <kbd><img src="./assets/i1.png" border:></kbd>
    <br><br><br>
    <kbd><img src="./assets/i2.png"></kbd>
