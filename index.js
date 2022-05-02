@@ -19,7 +19,7 @@ app.use("/images", express.static(path.join(__dirname, "/images")));
 const PORT = process.env.PORT || 8000;
 
 app.get('/', (req, res)=>{
-    res.send('Server is Running on port ', PORT);
+    res.send(`Server is Running on port ${PORT}`);
 });
 
 //CONNECTING TO DB
